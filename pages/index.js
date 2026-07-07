@@ -42,7 +42,7 @@ export default function Home() {
         </h1>{" "}
         <p className="text-gray-500 mb-8">
           Buat caption dan gambar promosi otomatis untuk produkmu.{" "}
-        </p>
+        </p>{" "}
         {/* Form Input */}{" "}
         <div className="bg-white rounded-xl shadow p-6 space-y-4">
           <div>
@@ -54,9 +54,9 @@ export default function Home() {
               value={brandName}
               onChange={(e) => setBrandName(e.target.value)}
               placeholder="Misal: Kopi Senja"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </div>
+          </div>{" "}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Deskripsi Produk{" "}
@@ -66,9 +66,9 @@ export default function Home() {
               onChange={(e) => setProductDescription(e.target.value)}
               placeholder="Misal: Kopi susu kekinian dengan gula aren asli"
               rows={3}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          </div>
+          </div>{" "}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Tone / Gaya Bahasa{" "}
@@ -76,14 +76,14 @@ export default function Home() {
             <select
               value={tone}
               onChange={(e) => setTone(e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="santai"> Santai </option>{" "}
               <option value="profesional"> Profesional </option>{" "}
               <option value="lucu"> Lucu </option>{" "}
               <option value="mewah"> Mewah / Elegan </option>{" "}
             </select>{" "}
-          </div>
+          </div>{" "}
           <button
             onClick={handleGenerate}
             disabled={loading || !brandName || !productDescription}
@@ -91,18 +91,18 @@ export default function Home() {
           >
             {loading ? "Sedang membuat konten..." : "Generate Konten"}{" "}
           </button>{" "}
-        </div>
+        </div>{" "}
         {/* Error Message */}{" "}
         {error && (
           <div className="mt-4 bg-red-50 border border-red-200 text-red-700 rounded-lg p-4">
             {" "}
             {error}{" "}
           </div>
-        )}
+        )}{" "}
         {/* Hasil */}{" "}
         {result && (
           <div className="mt-6 bg-white rounded-xl shadow p-6 space-y-4">
-            <h2 className="text-xl font-semibold text-gray-800"> Hasil </h2>
+            <h2 className="text-xl font-semibold text-gray-800"> Hasil </h2>{" "}
             <div>
               <p className="text-sm font-medium text-gray-500 mb-1">
                 {" "}
@@ -112,7 +112,7 @@ export default function Home() {
                 {" "}
                 {result.caption}{" "}
               </p>{" "}
-            </div>
+            </div>{" "}
             <div>
               <p className="text-sm font-medium text-gray-500 mb-1">
                 {" "}
